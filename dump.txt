@@ -1,0 +1,678 @@
+
+# Dicom-File-Format
+
+# Dicom-Meta-Information-Header
+# Used TransferSyntax: Little Endian Explicit
+(0002,0000) UL 226                                      #   4, 1 FileMetaInformationGroupLength
+(0002,0001) OB 00\01                                    #   2, 1 FileMetaInformationVersion
+(0002,0002) UI =VLWholeSlideMicroscopyImageStorage      #  30, 1 MediaStorageSOPClassUID
+(0002,0003) UI [1.2.276.0.7230010.3.1.4.3376381013.14472.1601002191.189] #  56, 1 MediaStorageSOPInstanceUID
+(0002,0010) UI =JPEGBaseline                            #  22, 1 TransferSyntaxUID
+(0002,0012) UI [1.2.276.0.7230010.3.0.3.6.3]            #  28, 1 ImplementationClassUID
+(0002,0013) SH [OFFIS_DCMTK_363]                        #  16, 1 ImplementationVersionName
+(0002,0016) AE [PathcoreSCP]                            #  12, 1 SourceApplicationEntityTitle
+
+# Dicom-Data-Set
+# Used TransferSyntax: JPEG Baseline
+(0008,0008) CS [DERIVED\PRIMARY\VOLUME\RESAMPLED]       #  32, 4 ImageType
+(0008,0012) DA [20200924]                               #   8, 1 InstanceCreationDate
+(0008,0013) TM [224950.430000]                          #  14, 1 InstanceCreationTime
+(0008,0016) UI =VLWholeSlideMicroscopyImageStorage      #  30, 1 SOPClassUID
+(0008,0018) UI [1.2.276.0.7230010.3.1.4.3376381013.14472.1601002191.189] #  56, 1 SOPInstanceUID
+(0008,0020) DA [20180904]                               #   8, 1 StudyDate
+(0008,0021) DA [20180904]                               #   8, 1 SeriesDate
+(0008,0023) DA [20180904]                               #   8, 1 ContentDate
+(0008,002a) DT [20200924]                               #   8, 1 AcquisitionDateTime
+(0008,0030) TM [210000]                                 #   6, 1 StudyTime
+(0008,0031) TM [210000]                                 #   6, 1 SeriesTime
+(0008,0033) TM [210000]                                 #   6, 1 ContentTime
+(0008,0050) SH [D18-6003]                               #   8, 1 AccessionNumber
+(0008,0060) CS [SM]                                     #   2, 1 Modality
+(0008,0070) LO [Huron Digital Pathology]                #  24, 1 Manufacturer
+(0008,0080) LO [1620 King St. N, St. Jacobs,ON N0L2N0, CA] #  42, 1 InstitutionName
+(0008,0090) PN [Bruce^Beckwith^^MD]                     #  18, 1 ReferringPhysicianName
+(0008,0201) SH [-0400]                                  #   6, 1 TimezoneOffsetFromUTC
+(0008,1030) LO [Skin excision]                          #  14, 1 StudyDescription
+(0008,1090) LO [TissueScope LE2.0]                      #  18, 1 ManufacturerModelName
+(0008,9206) CS [VOLUME]                                 #   6, 1 VolumetricProperties
+(0010,0010) PN [Robert^Huron]                           #  12, 1 PatientName
+(0010,0020) LO [2581674]                                #   8, 1 PatientID
+(0010,0021) LO [XYZ Medical Center]                     #  18, 1 IssuerOfPatientID
+(0010,0030) DA [19880419]                               #   8, 1 PatientBirthDate
+(0010,0040) CS [M]                                      #   2, 1 PatientSex
+(0018,1000) LO [LE-179]                                 #   6, 1 DeviceSerialNumber
+(0018,1020) LO [LE2.0V1.1]                              #  10, 1 SoftwareVersions
+(0018,9073) FD 0                                        #   8, 1 AcquisitionDuration
+(0020,000d) UI [1.2.276.0.7230010.3.1.2.3376381013.14472.1601002190.186] #  56, 1 StudyInstanceUID
+(0020,000e) UI [1.2.276.0.7230010.3.1.3.3376381013.14472.1601002190.187] #  56, 1 SeriesInstanceUID
+(0020,0010) SH [100-00-0002]                            #  12, 1 StudyID
+(0020,0011) IS [382183763]                              #  10, 1 SeriesNumber
+(0020,0013) IS [2]                                      #   2, 1 InstanceNumber
+(0020,0020) CS (no value available)                     #   0, 0 PatientOrientation
+(0020,0052) UI [1.2.826.0.1.3244452.3.91910903]         #  30, 1 FrameOfReferenceUID
+(0020,1040) LO [SLIDE_CORNER]                           #  12, 1 PositionReferenceIndicator
+(0020,9221) SQ (Sequence with undefined length #=1)     # u/l, 1 DimensionOrganizationSequence
+  (fffe,e000) na (Item with undefined length #=1)         # u/l, 1 Item
+    (0020,9164) UI [1.2.276.0.7230010.3.1.2.3376381013.14472.1601002191.191] #  56, 1 DimensionOrganizationUID
+  (fffe,e00d) na (ItemDelimitationItem)                   #   0, 0 ItemDelimitationItem
+(fffe,e0dd) na (SequenceDelimitationItem)               #   0, 0 SequenceDelimitationItem
+(0020,9311) CS [TILED_FULL]                             #  10, 1 DimensionOrganizationType
+(0028,0002) US 3                                        #   2, 1 SamplesPerPixel
+(0028,0004) CS [YBR_FULL_422]                           #  12, 1 PhotometricInterpretation
+(0028,0006) US 0                                        #   2, 1 PlanarConfiguration
+(0028,0008) IS [228]                                    #   4, 1 NumberOfFrames
+(0028,0010) US 1024                                     #   2, 1 Rows
+(0028,0011) US 1024                                     #   2, 1 Columns
+(0028,0100) US 8                                        #   2, 1 BitsAllocated
+(0028,0101) US 8                                        #   2, 1 BitsStored
+(0028,0102) US 7                                        #   2, 1 HighBit
+(0028,0103) US 0                                        #   2, 1 PixelRepresentation
+(0028,0301) CS [NO]                                     #   2, 1 BurnedInAnnotation
+(0028,2110) CS [01]                                     #   2, 1 LossyImageCompression
+(0028,2112) DS [10]                                     #   2, 1 LossyImageCompressionRatio
+(0028,2114) CS [ISO_10918_1]                            #  12, 1 LossyImageCompressionMethod
+(0040,0512) LO [D18-6003 A-1-1]                         #  14, 1 ContainerIdentifier
+(0040,0513) SQ (Sequence with undefined length #=1)     # u/l, 1 IssuerOfTheContainerIdentifierSequence
+  (fffe,e000) na (Item with undefined length #=1)         # u/l, 1 Item
+    (0040,0031) UT [XYZ Medical Center]                     #  18, 1 LocalNamespaceEntityID
+  (fffe,e00d) na (ItemDelimitationItem)                   #   0, 0 ItemDelimitationItem
+(fffe,e0dd) na (SequenceDelimitationItem)               #   0, 0 SequenceDelimitationItem
+(0040,0518) SQ (Sequence with undefined length #=1)     # u/l, 1 ContainerTypeCodeSequence
+  (fffe,e000) na (Item with undefined length #=3)         # u/l, 1 Item
+    (0008,0100) SH [G-8439]                                 #   6, 1 CodeValue
+    (0008,0102) SH [SRT]                                    #   4, 1 CodingSchemeDesignator
+    (0008,0104) LO [Microscope slide]                       #  16, 1 CodeMeaning
+  (fffe,e00d) na (ItemDelimitationItem)                   #   0, 0 ItemDelimitationItem
+(fffe,e0dd) na (SequenceDelimitationItem)               #   0, 0 SequenceDelimitationItem
+(0040,0555) SQ (Sequence with undefined length #=0)     # u/l, 1 AcquisitionContextSequence
+(fffe,e0dd) na (SequenceDelimitationItem)               #   0, 0 SequenceDelimitationItem
+(0040,0560) SQ (Sequence with undefined length #=1)     # u/l, 1 SpecimenDescriptionSequence
+  (fffe,e000) na (Item with undefined length #=4)         # u/l, 1 Item
+    (0040,0551) LO [D18-6003 A-1-1]                         #  14, 1 SpecimenIdentifier
+    (0040,0554) UI [1.2.276.0.7230010.3.1.2.3376381013.14472.1601002191.190] #  56, 1 SpecimenUID
+    (0040,0562) SQ (Sequence with undefined length #=0)     # u/l, 1 IssuerOfTheSpecimenIdentifierSequence
+    (fffe,e0dd) na (SequenceDelimitationItem)               #   0, 0 SequenceDelimitationItem
+    (0040,0610) SQ (Sequence with undefined length #=5)     # u/l, 1 SpecimenPreparationSequence
+      (fffe,e000) na (Item with undefined length #=1)         # u/l, 1 Item
+        (0040,0612) SQ (Sequence with undefined length #=5)     # u/l, 1 SpecimenPreparationStepContentItemSequence
+          (fffe,e000) na (Item with undefined length #=3)         # u/l, 1 Item
+            (0040,a040) CS [TEXT]                                   #   4, 1 ValueType
+            (0040,a043) SQ (Sequence with undefined length #=1)     # u/l, 1 ConceptNameCodeSequence
+              (fffe,e000) na (Item with undefined length #=3)         # u/l, 1 Item
+                (0008,0100) SH [121041]                                 #   6, 1 CodeValue
+                (0008,0102) SH [DCM]                                    #   4, 1 CodingSchemeDesignator
+                (0008,0104) LO [Specimen Identifier]                    #  20, 1 CodeMeaning
+              (fffe,e00d) na (ItemDelimitationItem)                   #   0, 0 ItemDelimitationItem
+            (fffe,e0dd) na (SequenceDelimitationItem)               #   0, 0 SequenceDelimitationItem
+            (0040,a160) UT [D18-6003 A-1-1]                         #  14, 1 TextValue
+          (fffe,e00d) na (ItemDelimitationItem)                   #   0, 0 ItemDelimitationItem
+          (fffe,e000) na (Item with undefined length #=3)         # u/l, 1 Item
+            (0040,a040) CS [TEXT]                                   #   4, 1 ValueType
+            (0040,a043) SQ (Sequence with undefined length #=1)     # u/l, 1 ConceptNameCodeSequence
+              (fffe,e000) na (Item with undefined length #=3)         # u/l, 1 Item
+                (0008,0100) SH [111724]                                 #   6, 1 CodeValue
+                (0008,0102) SH [DCM]                                    #   4, 1 CodingSchemeDesignator
+                (0008,0104) LO [Issuer of Specimen Identifier]          #  30, 1 CodeMeaning
+              (fffe,e00d) na (ItemDelimitationItem)                   #   0, 0 ItemDelimitationItem
+            (fffe,e0dd) na (SequenceDelimitationItem)               #   0, 0 SequenceDelimitationItem
+            (0040,a160) UT [XYZ Medical Center]                     #  18, 1 TextValue
+          (fffe,e00d) na (ItemDelimitationItem)                   #   0, 0 ItemDelimitationItem
+          (fffe,e000) na (Item with undefined length #=3)         # u/l, 1 Item
+            (0040,a040) CS [CODE]                                   #   4, 1 ValueType
+            (0040,a043) SQ (Sequence with undefined length #=1)     # u/l, 1 ConceptNameCodeSequence
+              (fffe,e000) na (Item with undefined length #=3)         # u/l, 1 Item
+                (0008,0100) SH [111701]                                 #   6, 1 CodeValue
+                (0008,0102) SH [DCM]                                    #   4, 1 CodingSchemeDesignator
+                (0008,0104) LO [Processing type]                        #  16, 1 CodeMeaning
+              (fffe,e00d) na (ItemDelimitationItem)                   #   0, 0 ItemDelimitationItem
+            (fffe,e0dd) na (SequenceDelimitationItem)               #   0, 0 SequenceDelimitationItem
+            (0040,a168) SQ (Sequence with undefined length #=1)     # u/l, 1 ConceptCodeSequence
+              (fffe,e000) na (Item with undefined length #=3)         # u/l, 1 Item
+                (0008,0100) SH [P3-02000]                               #   8, 1 CodeValue
+                (0008,0102) SH [SRT]                                    #   4, 1 CodingSchemeDesignator
+                (0008,0104) LO [Specimen collection]                    #  20, 1 CodeMeaning
+              (fffe,e00d) na (ItemDelimitationItem)                   #   0, 0 ItemDelimitationItem
+            (fffe,e0dd) na (SequenceDelimitationItem)               #   0, 0 SequenceDelimitationItem
+          (fffe,e00d) na (ItemDelimitationItem)                   #   0, 0 ItemDelimitationItem
+          (fffe,e000) na (Item with undefined length #=3)         # u/l, 1 Item
+            (0040,a040) CS [TEXT]                                   #   4, 1 ValueType
+            (0040,a043) SQ (Sequence with undefined length #=1)     # u/l, 1 ConceptNameCodeSequence
+              (fffe,e000) na (Item with undefined length #=3)         # u/l, 1 Item
+                (0008,0100) SH [111703]                                 #   6, 1 CodeValue
+                (0008,0102) SH [DCM]                                    #   4, 1 CodingSchemeDesignator
+                (0008,0104) LO [Processing step description]            #  28, 1 CodeMeaning
+              (fffe,e00d) na (ItemDelimitationItem)                   #   0, 0 ItemDelimitationItem
+            (fffe,e0dd) na (SequenceDelimitationItem)               #   0, 0 SequenceDelimitationItem
+            (0040,a160) UT [Taken]                                  #   6, 1 TextValue
+          (fffe,e00d) na (ItemDelimitationItem)                   #   0, 0 ItemDelimitationItem
+          (fffe,e000) na (Item with undefined length #=3)         # u/l, 1 Item
+            (0040,a040) CS [CODE]                                   #   4, 1 ValueType
+            (0040,a043) SQ (Sequence with undefined length #=1)     # u/l, 1 ConceptNameCodeSequence
+              (fffe,e000) na (Item with undefined length #=3)         # u/l, 1 Item
+                (0008,0100) SH [111704]                                 #   6, 1 CodeValue
+                (0008,0102) SH [DCM]                                    #   4, 1 CodingSchemeDesignator
+                (0008,0104) LO [Sampling method]                        #  16, 1 CodeMeaning
+              (fffe,e00d) na (ItemDelimitationItem)                   #   0, 0 ItemDelimitationItem
+            (fffe,e0dd) na (SequenceDelimitationItem)               #   0, 0 SequenceDelimitationItem
+            (0040,a168) SQ (Sequence with undefined length #=1)     # u/l, 1 ConceptCodeSequence
+              (fffe,e000) na (Item with undefined length #=3)         # u/l, 1 Item
+                (0008,0100) SH [P1-03000]                               #   8, 1 CodeValue
+                (0008,0102) SH [SRT]                                    #   4, 1 CodingSchemeDesignator
+                (0008,0104) LO [Excision]                               #   8, 1 CodeMeaning
+              (fffe,e00d) na (ItemDelimitationItem)                   #   0, 0 ItemDelimitationItem
+            (fffe,e0dd) na (SequenceDelimitationItem)               #   0, 0 SequenceDelimitationItem
+          (fffe,e00d) na (ItemDelimitationItem)                   #   0, 0 ItemDelimitationItem
+        (fffe,e0dd) na (SequenceDelimitationItem)               #   0, 0 SequenceDelimitationItem
+      (fffe,e00d) na (ItemDelimitationItem)                   #   0, 0 ItemDelimitationItem
+      (fffe,e000) na (Item with undefined length #=1)         # u/l, 1 Item
+        (0040,0612) SQ (Sequence with undefined length #=5)     # u/l, 1 SpecimenPreparationStepContentItemSequence
+          (fffe,e000) na (Item with undefined length #=3)         # u/l, 1 Item
+            (0040,a040) CS [TEXT]                                   #   4, 1 ValueType
+            (0040,a043) SQ (Sequence with undefined length #=1)     # u/l, 1 ConceptNameCodeSequence
+              (fffe,e000) na (Item with undefined length #=3)         # u/l, 1 Item
+                (0008,0100) SH [121041]                                 #   6, 1 CodeValue
+                (0008,0102) SH [DCM]                                    #   4, 1 CodingSchemeDesignator
+                (0008,0104) LO [Specimen Identifier]                    #  20, 1 CodeMeaning
+              (fffe,e00d) na (ItemDelimitationItem)                   #   0, 0 ItemDelimitationItem
+            (fffe,e0dd) na (SequenceDelimitationItem)               #   0, 0 SequenceDelimitationItem
+            (0040,a160) UT [D18-6003 A-1-1]                         #  14, 1 TextValue
+          (fffe,e00d) na (ItemDelimitationItem)                   #   0, 0 ItemDelimitationItem
+          (fffe,e000) na (Item with undefined length #=3)         # u/l, 1 Item
+            (0040,a040) CS [TEXT]                                   #   4, 1 ValueType
+            (0040,a043) SQ (Sequence with undefined length #=1)     # u/l, 1 ConceptNameCodeSequence
+              (fffe,e000) na (Item with undefined length #=3)         # u/l, 1 Item
+                (0008,0100) SH [111724]                                 #   6, 1 CodeValue
+                (0008,0102) SH [DCM]                                    #   4, 1 CodingSchemeDesignator
+                (0008,0104) LO [Issuer of Specimen Identifier]          #  30, 1 CodeMeaning
+              (fffe,e00d) na (ItemDelimitationItem)                   #   0, 0 ItemDelimitationItem
+            (fffe,e0dd) na (SequenceDelimitationItem)               #   0, 0 SequenceDelimitationItem
+            (0040,a160) UT [XYZ Medical Center]                     #  18, 1 TextValue
+          (fffe,e00d) na (ItemDelimitationItem)                   #   0, 0 ItemDelimitationItem
+          (fffe,e000) na (Item with undefined length #=3)         # u/l, 1 Item
+            (0040,a040) CS [CODE]                                   #   4, 1 ValueType
+            (0040,a043) SQ (Sequence with undefined length #=1)     # u/l, 1 ConceptNameCodeSequence
+              (fffe,e000) na (Item with undefined length #=3)         # u/l, 1 Item
+                (0008,0100) SH [111704]                                 #   6, 1 CodeValue
+                (0008,0102) SH [DCM]                                    #   4, 1 CodingSchemeDesignator
+                (0008,0104) LO [Sampling method]                        #  16, 1 CodeMeaning
+              (fffe,e00d) na (ItemDelimitationItem)                   #   0, 0 ItemDelimitationItem
+            (fffe,e0dd) na (SequenceDelimitationItem)               #   0, 0 SequenceDelimitationItem
+            (0040,a168) SQ (Sequence with undefined length #=1)     # u/l, 1 ConceptCodeSequence
+              (fffe,e000) na (Item with undefined length #=3)         # u/l, 1 Item
+                (0008,0100) SH [111726]                                 #   6, 1 CodeValue
+                (0008,0102) SH [SRT]                                    #   4, 1 CodingSchemeDesignator
+                (0008,0104) LO [Dissection with entire specimen submission] #  42, 1 CodeMeaning
+              (fffe,e00d) na (ItemDelimitationItem)                   #   0, 0 ItemDelimitationItem
+            (fffe,e0dd) na (SequenceDelimitationItem)               #   0, 0 SequenceDelimitationItem
+          (fffe,e00d) na (ItemDelimitationItem)                   #   0, 0 ItemDelimitationItem
+          (fffe,e000) na (Item with undefined length #=3)         # u/l, 1 Item
+            (0040,a040) CS [TEXT]                                   #   4, 1 ValueType
+            (0040,a043) SQ (Sequence with undefined length #=1)     # u/l, 1 ConceptNameCodeSequence
+              (fffe,e000) na (Item with undefined length #=3)         # u/l, 1 Item
+                (0008,0100) SH [111705]                                 #   6, 1 CodeValue
+                (0008,0102) SH [DCM]                                    #   4, 1 CodingSchemeDesignator
+                (0008,0104) LO [Parent Specimen Identifier]             #  26, 1 CodeMeaning
+              (fffe,e00d) na (ItemDelimitationItem)                   #   0, 0 ItemDelimitationItem
+            (fffe,e0dd) na (SequenceDelimitationItem)               #   0, 0 SequenceDelimitationItem
+            (0040,a160) UT [D18-6003 A-1]                           #  12, 1 TextValue
+          (fffe,e00d) na (ItemDelimitationItem)                   #   0, 0 ItemDelimitationItem
+          (fffe,e000) na (Item with undefined length #=3)         # u/l, 1 Item
+            (0040,a040) CS [CODE]                                   #   4, 1 ValueType
+            (0040,a043) SQ (Sequence with undefined length #=1)     # u/l, 1 ConceptNameCodeSequence
+              (fffe,e000) na (Item with undefined length #=3)         # u/l, 1 Item
+                (0008,0100) SH [111707]                                 #   6, 1 CodeValue
+                (0008,0102) SH [DCM]                                    #   4, 1 CodingSchemeDesignator
+                (0008,0104) LO [Parent specimen type]                   #  20, 1 CodeMeaning
+              (fffe,e00d) na (ItemDelimitationItem)                   #   0, 0 ItemDelimitationItem
+            (fffe,e0dd) na (SequenceDelimitationItem)               #   0, 0 SequenceDelimitationItem
+            (0040,a168) SQ (Sequence with undefined length #=1)     # u/l, 1 ConceptCodeSequence
+              (fffe,e000) na (Item with undefined length #=3)         # u/l, 1 Item
+                (0008,0100) SH [G-8300]                                 #   6, 1 CodeValue
+                (0008,0102) SH [SRT]                                    #   4, 1 CodingSchemeDesignator
+                (0008,0104) LO [Tissue specimen]                        #  16, 1 CodeMeaning
+              (fffe,e00d) na (ItemDelimitationItem)                   #   0, 0 ItemDelimitationItem
+            (fffe,e0dd) na (SequenceDelimitationItem)               #   0, 0 SequenceDelimitationItem
+          (fffe,e00d) na (ItemDelimitationItem)                   #   0, 0 ItemDelimitationItem
+        (fffe,e0dd) na (SequenceDelimitationItem)               #   0, 0 SequenceDelimitationItem
+      (fffe,e00d) na (ItemDelimitationItem)                   #   0, 0 ItemDelimitationItem
+      (fffe,e000) na (Item with undefined length #=1)         # u/l, 1 Item
+        (0040,0612) SQ (Sequence with undefined length #=3)     # u/l, 1 SpecimenPreparationStepContentItemSequence
+          (fffe,e000) na (Item with undefined length #=3)         # u/l, 1 Item
+            (0040,a040) CS [TEXT]                                   #   4, 1 ValueType
+            (0040,a043) SQ (Sequence with undefined length #=1)     # u/l, 1 ConceptNameCodeSequence
+              (fffe,e000) na (Item with undefined length #=3)         # u/l, 1 Item
+                (0008,0100) SH [121041]                                 #   6, 1 CodeValue
+                (0008,0102) SH [DCM]                                    #   4, 1 CodingSchemeDesignator
+                (0008,0104) LO [Specimen Identifier]                    #  20, 1 CodeMeaning
+              (fffe,e00d) na (ItemDelimitationItem)                   #   0, 0 ItemDelimitationItem
+            (fffe,e0dd) na (SequenceDelimitationItem)               #   0, 0 SequenceDelimitationItem
+            (0040,a160) UT [D18-6003 A-1-1]                         #  14, 1 TextValue
+          (fffe,e00d) na (ItemDelimitationItem)                   #   0, 0 ItemDelimitationItem
+          (fffe,e000) na (Item with undefined length #=3)         # u/l, 1 Item
+            (0040,a040) CS [TEXT]                                   #   4, 1 ValueType
+            (0040,a043) SQ (Sequence with undefined length #=1)     # u/l, 1 ConceptNameCodeSequence
+              (fffe,e000) na (Item with undefined length #=3)         # u/l, 1 Item
+                (0008,0100) SH [111724]                                 #   6, 1 CodeValue
+                (0008,0102) SH [DCM]                                    #   4, 1 CodingSchemeDesignator
+                (0008,0104) LO [Issuer of Specimen Identifier]          #  30, 1 CodeMeaning
+              (fffe,e00d) na (ItemDelimitationItem)                   #   0, 0 ItemDelimitationItem
+            (fffe,e0dd) na (SequenceDelimitationItem)               #   0, 0 SequenceDelimitationItem
+            (0040,a160) UT [XYZ Medical Center]                     #  18, 1 TextValue
+          (fffe,e00d) na (ItemDelimitationItem)                   #   0, 0 ItemDelimitationItem
+          (fffe,e000) na (Item with undefined length #=3)         # u/l, 1 Item
+            (0040,a040) CS [CODE]                                   #   4, 1 ValueType
+            (0040,a043) SQ (Sequence with undefined length #=1)     # u/l, 1 ConceptNameCodeSequence
+              (fffe,e000) na (Item with undefined length #=3)         # u/l, 1 Item
+                (0008,0100) SH [111715]                                 #   6, 1 CodeValue
+                (0008,0102) SH [DCM]                                    #   4, 1 CodingSchemeDesignator
+                (0008,0104) LO [Specimen fixative]                      #  18, 1 CodeMeaning
+              (fffe,e00d) na (ItemDelimitationItem)                   #   0, 0 ItemDelimitationItem
+            (fffe,e0dd) na (SequenceDelimitationItem)               #   0, 0 SequenceDelimitationItem
+            (0040,a168) SQ (Sequence with undefined length #=1)     # u/l, 1 ConceptCodeSequence
+              (fffe,e000) na (Item with undefined length #=3)         # u/l, 1 Item
+                (0008,0100) SH [C-2141C]                                #   8, 1 CodeValue
+                (0008,0102) SH [SRT]                                    #   4, 1 CodingSchemeDesignator
+                (0008,0104) LO [Neutral Buffered Formalin]              #  26, 1 CodeMeaning
+              (fffe,e00d) na (ItemDelimitationItem)                   #   0, 0 ItemDelimitationItem
+            (fffe,e0dd) na (SequenceDelimitationItem)               #   0, 0 SequenceDelimitationItem
+          (fffe,e00d) na (ItemDelimitationItem)                   #   0, 0 ItemDelimitationItem
+        (fffe,e0dd) na (SequenceDelimitationItem)               #   0, 0 SequenceDelimitationItem
+      (fffe,e00d) na (ItemDelimitationItem)                   #   0, 0 ItemDelimitationItem
+      (fffe,e000) na (Item with undefined length #=1)         # u/l, 1 Item
+        (0040,0612) SQ (Sequence with undefined length #=3)     # u/l, 1 SpecimenPreparationStepContentItemSequence
+          (fffe,e000) na (Item with undefined length #=3)         # u/l, 1 Item
+            (0040,a040) CS [TEXT]                                   #   4, 1 ValueType
+            (0040,a043) SQ (Sequence with undefined length #=1)     # u/l, 1 ConceptNameCodeSequence
+              (fffe,e000) na (Item with undefined length #=3)         # u/l, 1 Item
+                (0008,0100) SH [121041]                                 #   6, 1 CodeValue
+                (0008,0102) SH [DCM]                                    #   4, 1 CodingSchemeDesignator
+                (0008,0104) LO [Specimen Identifier]                    #  20, 1 CodeMeaning
+              (fffe,e00d) na (ItemDelimitationItem)                   #   0, 0 ItemDelimitationItem
+            (fffe,e0dd) na (SequenceDelimitationItem)               #   0, 0 SequenceDelimitationItem
+            (0040,a160) UT [D18-6003 A-1-1]                         #  14, 1 TextValue
+          (fffe,e00d) na (ItemDelimitationItem)                   #   0, 0 ItemDelimitationItem
+          (fffe,e000) na (Item with undefined length #=3)         # u/l, 1 Item
+            (0040,a040) CS [TEXT]                                   #   4, 1 ValueType
+            (0040,a043) SQ (Sequence with undefined length #=1)     # u/l, 1 ConceptNameCodeSequence
+              (fffe,e000) na (Item with undefined length #=3)         # u/l, 1 Item
+                (0008,0100) SH [111724]                                 #   6, 1 CodeValue
+                (0008,0102) SH [DCM]                                    #   4, 1 CodingSchemeDesignator
+                (0008,0104) LO [Issuer of Specimen Identifier]          #  30, 1 CodeMeaning
+              (fffe,e00d) na (ItemDelimitationItem)                   #   0, 0 ItemDelimitationItem
+            (fffe,e0dd) na (SequenceDelimitationItem)               #   0, 0 SequenceDelimitationItem
+            (0040,a160) UT [XYZ Medical Center]                     #  18, 1 TextValue
+          (fffe,e00d) na (ItemDelimitationItem)                   #   0, 0 ItemDelimitationItem
+          (fffe,e000) na (Item with undefined length #=3)         # u/l, 1 Item
+            (0040,a040) CS [CODE]                                   #   4, 1 ValueType
+            (0040,a043) SQ (Sequence with undefined length #=1)     # u/l, 1 ConceptNameCodeSequence
+              (fffe,e000) na (Item with undefined length #=3)         # u/l, 1 Item
+                (0008,0100) SH [F-6221A]                                #   8, 1 CodeValue
+                (0008,0102) SH [SRT]                                    #   4, 1 CodingSchemeDesignator
+                (0008,0104) LO [Embedding medium]                       #  16, 1 CodeMeaning
+              (fffe,e00d) na (ItemDelimitationItem)                   #   0, 0 ItemDelimitationItem
+            (fffe,e0dd) na (SequenceDelimitationItem)               #   0, 0 SequenceDelimitationItem
+            (0040,a168) SQ (Sequence with undefined length #=1)     # u/l, 1 ConceptCodeSequence
+              (fffe,e000) na (Item with undefined length #=3)         # u/l, 1 Item
+                (0008,0100) SH [F-616D8]                                #   8, 1 CodeValue
+                (0008,0102) SH [SRT]                                    #   4, 1 CodingSchemeDesignator
+                (0008,0104) LO [Paraffin wax]                           #  12, 1 CodeMeaning
+              (fffe,e00d) na (ItemDelimitationItem)                   #   0, 0 ItemDelimitationItem
+            (fffe,e0dd) na (SequenceDelimitationItem)               #   0, 0 SequenceDelimitationItem
+          (fffe,e00d) na (ItemDelimitationItem)                   #   0, 0 ItemDelimitationItem
+        (fffe,e0dd) na (SequenceDelimitationItem)               #   0, 0 SequenceDelimitationItem
+      (fffe,e00d) na (ItemDelimitationItem)                   #   0, 0 ItemDelimitationItem
+      (fffe,e000) na (Item with undefined length #=1)         # u/l, 1 Item
+        (0040,0612) SQ (Sequence with undefined length #=4)     # u/l, 1 SpecimenPreparationStepContentItemSequence
+          (fffe,e000) na (Item with undefined length #=3)         # u/l, 1 Item
+            (0040,a040) CS [TEXT]                                   #   4, 1 ValueType
+            (0040,a043) SQ (Sequence with undefined length #=1)     # u/l, 1 ConceptNameCodeSequence
+              (fffe,e000) na (Item with undefined length #=3)         # u/l, 1 Item
+                (0008,0100) SH [121041]                                 #   6, 1 CodeValue
+                (0008,0102) SH [DCM]                                    #   4, 1 CodingSchemeDesignator
+                (0008,0104) LO [Specimen Identifier]                    #  20, 1 CodeMeaning
+              (fffe,e00d) na (ItemDelimitationItem)                   #   0, 0 ItemDelimitationItem
+            (fffe,e0dd) na (SequenceDelimitationItem)               #   0, 0 SequenceDelimitationItem
+            (0040,a160) UT [D18-6003 A-1-1]                         #  14, 1 TextValue
+          (fffe,e00d) na (ItemDelimitationItem)                   #   0, 0 ItemDelimitationItem
+          (fffe,e000) na (Item with undefined length #=3)         # u/l, 1 Item
+            (0040,a040) CS [CODE]                                   #   4, 1 ValueType
+            (0040,a043) SQ (Sequence with undefined length #=1)     # u/l, 1 ConceptNameCodeSequence
+              (fffe,e000) na (Item with undefined length #=3)         # u/l, 1 Item
+                (0008,0100) SH [111701]                                 #   6, 1 CodeValue
+                (0008,0102) SH [SRT]                                    #   4, 1 CodingSchemeDesignator
+                (0008,0104) LO [Processing type]                        #  16, 1 CodeMeaning
+              (fffe,e00d) na (ItemDelimitationItem)                   #   0, 0 ItemDelimitationItem
+            (fffe,e0dd) na (SequenceDelimitationItem)               #   0, 0 SequenceDelimitationItem
+            (0040,a168) SQ (Sequence with undefined length #=1)     # u/l, 1 ConceptCodeSequence
+              (fffe,e000) na (Item with undefined length #=3)         # u/l, 1 Item
+                (0008,0100) SH [P3-00003]                               #   8, 1 CodeValue
+                (0008,0102) SH [SRT]                                    #   4, 1 CodingSchemeDesignator
+                (0008,0104) LO [Staining]                               #   8, 1 CodeMeaning
+              (fffe,e00d) na (ItemDelimitationItem)                   #   0, 0 ItemDelimitationItem
+            (fffe,e0dd) na (SequenceDelimitationItem)               #   0, 0 SequenceDelimitationItem
+          (fffe,e00d) na (ItemDelimitationItem)                   #   0, 0 ItemDelimitationItem
+          (fffe,e000) na (Item with undefined length #=3)         # u/l, 1 Item
+            (0040,a040) CS [CODE]                                   #   4, 1 ValueType
+            (0040,a043) SQ (Sequence with undefined length #=1)     # u/l, 1 ConceptNameCodeSequence
+              (fffe,e000) na (Item with undefined length #=3)         # u/l, 1 Item
+                (0008,0100) SH [G-C350]                                 #   6, 1 CodeValue
+                (0008,0102) SH [SRT]                                    #   4, 1 CodingSchemeDesignator
+                (0008,0104) LO [Using substance]                        #  16, 1 CodeMeaning
+              (fffe,e00d) na (ItemDelimitationItem)                   #   0, 0 ItemDelimitationItem
+            (fffe,e0dd) na (SequenceDelimitationItem)               #   0, 0 SequenceDelimitationItem
+            (0040,a168) SQ (Sequence with undefined length #=1)     # u/l, 1 ConceptCodeSequence
+              (fffe,e000) na (Item with undefined length #=3)         # u/l, 1 Item
+                (0008,0100) SH [C-22968]                                #   8, 1 CodeValue
+                (0008,0102) SH [SRT]                                    #   4, 1 CodingSchemeDesignator
+                (0008,0104) LO [hematoxylin stain]                      #  18, 1 CodeMeaning
+              (fffe,e00d) na (ItemDelimitationItem)                   #   0, 0 ItemDelimitationItem
+            (fffe,e0dd) na (SequenceDelimitationItem)               #   0, 0 SequenceDelimitationItem
+          (fffe,e00d) na (ItemDelimitationItem)                   #   0, 0 ItemDelimitationItem
+          (fffe,e000) na (Item with undefined length #=3)         # u/l, 1 Item
+            (0040,a040) CS [CODE]                                   #   4, 1 ValueType
+            (0040,a043) SQ (Sequence with undefined length #=1)     # u/l, 1 ConceptNameCodeSequence
+              (fffe,e000) na (Item with undefined length #=3)         # u/l, 1 Item
+                (0008,0100) SH [G-C350]                                 #   6, 1 CodeValue
+                (0008,0102) SH [SRT]                                    #   4, 1 CodingSchemeDesignator
+                (0008,0104) LO [Using substance]                        #  16, 1 CodeMeaning
+              (fffe,e00d) na (ItemDelimitationItem)                   #   0, 0 ItemDelimitationItem
+            (fffe,e0dd) na (SequenceDelimitationItem)               #   0, 0 SequenceDelimitationItem
+            (0040,a168) SQ (Sequence with undefined length #=1)     # u/l, 1 ConceptCodeSequence
+              (fffe,e000) na (Item with undefined length #=3)         # u/l, 1 Item
+                (0008,0100) SH [C-22919]                                #   8, 1 CodeValue
+                (0008,0102) SH [SRT]                                    #   4, 1 CodingSchemeDesignator
+                (0008,0104) LO [water soluble eosin stain]              #  26, 1 CodeMeaning
+              (fffe,e00d) na (ItemDelimitationItem)                   #   0, 0 ItemDelimitationItem
+            (fffe,e0dd) na (SequenceDelimitationItem)               #   0, 0 SequenceDelimitationItem
+          (fffe,e00d) na (ItemDelimitationItem)                   #   0, 0 ItemDelimitationItem
+        (fffe,e0dd) na (SequenceDelimitationItem)               #   0, 0 SequenceDelimitationItem
+      (fffe,e00d) na (ItemDelimitationItem)                   #   0, 0 ItemDelimitationItem
+    (fffe,e0dd) na (SequenceDelimitationItem)               #   0, 0 SequenceDelimitationItem
+  (fffe,e00d) na (ItemDelimitationItem)                   #   0, 0 ItemDelimitationItem
+(fffe,e0dd) na (SequenceDelimitationItem)               #   0, 0 SequenceDelimitationItem
+(0048,0001) FL 1155.2                                   #   4, 1 ImagedVolumeWidth
+(0048,0002) FL 1853.8                                   #   4, 1 ImagedVolumeHeight
+(0048,0003) FL 1                                        #   4, 1 ImagedVolumeDepth
+(0048,0006) UL 11552                                    #   4, 1 TotalPixelMatrixColumns
+(0048,0007) UL 18538                                    #   4, 1 TotalPixelMatrixRows
+(0048,0008) SQ (Sequence with undefined length #=1)     # u/l, 1 TotalPixelMatrixOriginSequence
+  (fffe,e000) na (Item with undefined length #=2)         # u/l, 1 Item
+    (0040,072a) DS [3.094673]                               #   8, 1 XOffsetInSlideCoordinateSystem
+    (0040,073a) DS [37.930244]                              #  10, 1 YOffsetInSlideCoordinateSystem
+  (fffe,e00d) na (ItemDelimitationItem)                   #   0, 0 ItemDelimitationItem
+(fffe,e0dd) na (SequenceDelimitationItem)               #   0, 0 SequenceDelimitationItem
+(0048,0010) CS [NO]                                     #   2, 1 SpecimenLabelInImage
+(0048,0011) CS [AUTO]                                   #   4, 1 FocusMethod
+(0048,0012) CS [NO]                                     #   2, 1 ExtendedDepthOfField
+(0048,0102) DS [1\0\0\0\-1\0]                           #  12, 6 ImageOrientationSlide
+(0048,0105) SQ (Sequence with undefined length #=1)     # u/l, 1 OpticalPathSequence
+  (fffe,e000) na (Item with undefined length #=4)         # u/l, 1 Item
+    (0022,0016) SQ (Sequence with undefined length #=1)     # u/l, 1 IlluminationTypeCodeSequence
+      (fffe,e000) na (Item with undefined length #=3)         # u/l, 1 Item
+        (0008,0100) SH [R-102C0]                                #   8, 1 CodeValue
+        (0008,0102) SH [SRT]                                    #   4, 1 CodingSchemeDesignator
+        (0008,0104) LO [FULL Spectrum]                          #  14, 1 CodeMeaning
+      (fffe,e00d) na (ItemDelimitationItem)                   #   0, 0 ItemDelimitationItem
+    (fffe,e0dd) na (SequenceDelimitationItem)               #   0, 0 SequenceDelimitationItem
+    (0028,2000) OB 00\00\ee\20\00\00\00\00\04\20\00\00\73\63\6e\72\52\47\42\20\4c\61... # 60960, 1 ICCProfile
+    (0048,0106) SH [1]                                      #   2, 1 OpticalPathIdentifier
+    (0048,0108) SQ (Sequence with undefined length #=1)     # u/l, 1 IlluminationColorCodeSequence
+      (fffe,e000) na (Item with undefined length #=3)         # u/l, 1 Item
+        (0008,0100) SH [11744]                                  #   6, 1 CodeValue
+        (0008,0102) SH [DCM]                                    #   4, 1 CodingSchemeDesignator
+        (0008,0104) LO [Brightfield illumination]               #  24, 1 CodeMeaning
+      (fffe,e00d) na (ItemDelimitationItem)                   #   0, 0 ItemDelimitationItem
+    (fffe,e0dd) na (SequenceDelimitationItem)               #   0, 0 SequenceDelimitationItem
+  (fffe,e00d) na (ItemDelimitationItem)                   #   0, 0 ItemDelimitationItem
+(fffe,e0dd) na (SequenceDelimitationItem)               #   0, 0 SequenceDelimitationItem
+(0048,0303) UL 1                                        #   4, 1 TotalPixelMatrixFocalPlanes
+(2200,0002) UT [Label Text]                             #  10, 1 LabelText
+(2200,0005) LT [{}]                                     #   2, 1 BarcodeValue
+(5200,9229) SQ (Sequence with undefined length #=1)     # u/l, 1 SharedFunctionalGroupsSequence
+  (fffe,e000) na (Item with undefined length #=3)         # u/l, 1 Item
+    (0008,1140) SQ (Sequence with undefined length #=0)     # u/l, 1 ReferencedImageSequence
+    (fffe,e0dd) na (SequenceDelimitationItem)               #   0, 0 SequenceDelimitationItem
+    (0028,9110) SQ (Sequence with undefined length #=1)     # u/l, 1 PixelMeasuresSequence
+      (fffe,e000) na (Item with undefined length #=2)         # u/l, 1 Item
+        (0018,0050) DS [1]                                      #   2, 1 SliceThickness
+        (0028,0030) DS [0.001600\0.001600]                      #  18, 2 PixelSpacing
+      (fffe,e00d) na (ItemDelimitationItem)                   #   0, 0 ItemDelimitationItem
+    (fffe,e0dd) na (SequenceDelimitationItem)               #   0, 0 SequenceDelimitationItem
+    (0040,0710) SQ (Sequence with undefined length #=1)     # u/l, 1 WholeSlideMicroscopyImageFrameTypeSequence
+      (fffe,e000) na (Item with undefined length #=1)         # u/l, 1 Item
+        (0008,9007) CS [DERIVED\PRIMARY\VOLUME\RESAMPLED]       #  32, 4 FrameType
+      (fffe,e00d) na (ItemDelimitationItem)                   #   0, 0 ItemDelimitationItem
+    (fffe,e0dd) na (SequenceDelimitationItem)               #   0, 0 SequenceDelimitationItem
+  (fffe,e00d) na (ItemDelimitationItem)                   #   0, 0 ItemDelimitationItem
+(fffe,e0dd) na (SequenceDelimitationItem)               #   0, 0 SequenceDelimitationItem
+(7fe0,0010) OB (PixelSequence #=229)                    # u/l, 1 PixelData
+  (fffe,e000) pi (no value available)                     #   0, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 36968, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 131370, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 37066, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 36798, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 37502, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 37134, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 37402, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 37806, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 37636, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 38080, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 36492, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 22446, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 95664, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 317366, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 283414, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 116082, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 49026, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 79304, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 36420, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 36384, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 36092, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 36100, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 35452, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 22540, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 158446, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 318670, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 280818, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 231380, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 163782, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 77710, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 35726, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 35924, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 35434, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 36044, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 36288, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 22988, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 37050, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 228842, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 223070, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 181480, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 235820, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 106964, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 38216, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 66138, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 107376, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 36738, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 36306, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 22418, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 35410, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 174828, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 199596, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 228724, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 216510, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 84256, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 243950, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 345282, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 359220, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 91260, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 37824, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 22478, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 35312, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 131128, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 236430, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 273976, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 231396, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 69072, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 218376, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 403164, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 371344, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 263456, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 40708, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 22766, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 35628, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 121354, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 221876, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 246346, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 306698, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 164230, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 311160, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 345782, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 290368, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 210394, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 69288, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 22802, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 35840, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 98220, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 206858, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 192628, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 240222, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 150004, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 231472, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 292928, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 298272, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 240014, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 197718, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 23444, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 35400, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 62482, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 241140, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 201008, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 181388, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 125324, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 248068, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 255120, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 197354, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 277058, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 292742, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 25934, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 35814, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 64642, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 232152, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 201442, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 139336, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 143154, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 207382, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 163556, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 179464, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 218230, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 243088, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 24046, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 36830, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 53002, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 168306, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 222352, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 176698, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 129396, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 176684, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 190504, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 185994, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 183068, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 192380, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 23054, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 36036, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 40788, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 106012, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 203176, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 209140, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 82338, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 110108, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 194810, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 178956, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 139078, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 172808, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 25410, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 36122, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 35746, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 35102, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 100760, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 175504, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 35302, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 35156, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 158738, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 135158, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 66146, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 171568, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 36156, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 35898, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 36228, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 35114, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 35524, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 35590, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 35136, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 35310, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 76040, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 149872, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 141010, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 147534, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 23056, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 36320, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 35856, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 36106, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 35538, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 35272, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 35324, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 35048, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 36584, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 42214, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 36548, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 36194, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 22670, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 35910, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 35400, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 35764, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 35242, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 35298, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 35294, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 35366, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 35488, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 35584, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 35582, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 36986, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 22640, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 35436, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 36096, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 35792, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 36126, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 35964, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 35968, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 35228, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 35364, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 35666, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 36638, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 35680, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 22370, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 36068, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 36916, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 35276, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 34976, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 34994, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 35170, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 34906, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 34996, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 35652, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 35328, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 35448, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 22332, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 21406, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 21750, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 21670, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 21768, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 21836, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 21832, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 22090, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 21134, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 20958, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 21136, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 20932, 1 Item
+  (fffe,e000) pi ff\d8\ff\e0\00\10\4a\46\49\46\00\01\01\00\00\01\00\01\00\00\ff\db... # 18406, 1 Item
+(fffe,e0dd) na (SequenceDelimitationItem)               #   0, 0 SequenceDelimitationItem
