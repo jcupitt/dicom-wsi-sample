@@ -15,7 +15,7 @@ ftp://medical.nema.org/medical/Dicom/DataSets/WG26/WG26Demo2020_PV/Robert%5EHuro
 The original high-res image, with 3358 frames. It's over 800MB so it's not
 included here, but you can download it from the ilnk above.
 
-### ``-.189.dcm` 
+### `-.189.dcm` 
 
 A low-res derived image downsampled to only 228 frames.
 
