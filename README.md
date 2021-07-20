@@ -37,8 +37,24 @@ All images from WG26, the group putting the WSI DICOM standard together, see:
 
 ftp://medical.nema.org/medical/Dicom/DataSets/WG26
 
+## GCP WSI converter
 
+This GCP converter writes WSI DICOM images:
 
+https://github.com/jcupitt/wsi-to-dicom-converter
 
+I compiled and ran it like this:
 
+```
+$ wsi2dcm \
+  --input CMU-1-small-region.svs \
+  --outFolder cmu-1-small-region \
+  --batch 1000000 \
+  --seriesDescription x \
+  --levels 20
+```
+
+On the openslide sample SVS:
+
+http://openslide.cs.cmu.edu/download/openslide-testdata/Aperio/
 
